@@ -1,0 +1,305 @@
+body {
+    overflow-x: hidden; /* Hides horizontal overflow */
+    box-sizing: border-box;
+}
+/* General Styling */
+.navbar {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar-brand img {
+    height: 60px;
+    width: 60px;
+}
+
+.navbar-nav {
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.nav-link {
+    color: #FFD700 !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 30px;
+}
+
+.overlays {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.overlays .overlay-content {
+    text-align: center;
+    color: white;
+}
+
+.overlays .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-name {
+    font-size: 30px !important;
+    text-decoration: none;
+    color: #FFD700 !important;
+}
+footer a:hover{
+    color: #FFD700 !important;
+}
+
+.head-image {
+    background-image: url("https://www.symestic.com/hubfs/IOT_GLOSSAR.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #444;
+    position: relative;
+    height: 80vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: overlay;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px; /* Ensure spacing from footer */
+}
+
+.image-row img {
+    max-width: 100px; /* Adjust the width of each image */
+    height: auto;
+    border-radius: 5px; /* Optional: Adds slight rounding to the corners of the images */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.first {
+    padding: 50px;
+}
+
+.page1 {
+    background-image: url('https://htssgroup.eu/wp-content/uploads/2023/05/10.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #444;
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: overlay;
+}
+
+.innerpage1 {
+    border-radius: 10px;
+    background-color: white;
+    padding: 40px 60px;
+    margin: 40px 60px;
+}
+
+.download-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.file-container {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.file-container img {
+    width: 50px;
+    height: 50px;
+}
+
+.file-container p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #FFD700;
+}
+.content{
+    width: 100%;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://kotaielectronics.com/wp-content/uploads/2024/01/IoT-1.jpg");
+    background-attachment: fixed;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flag{
+    max-width: 100%;
+    height: auto;
+}
+.profile{
+    border-radius: 5%;
+}
+/* MEDIA QUERIES FOR SMALL SCREENS BELOW 700px */
+@media screen and (max-width: 699px) {
+    .navbar-brand img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .nav-name {
+        font-size: 24px !important;
+    }
+
+    .navbar-toggler {
+        display: block;
+        border-color: white;
+    }
+
+    .navbar-toggler.collapsed + .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8); /* Darker background for small screens */
+    }
+
+    .head-image {
+        height: 50vh; /* Adjust height for small screens */
+    }
+
+    .first {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .innerpage1 {
+        padding: 20px; /* Adjust margins and padding for small screens */
+        margin: 20px;
+    }
+
+    .page1 {
+        height: auto; /* Let content grow */
+    }
+
+    .download-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px;
+    }
+
+    .file-container img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .file-container p {
+        font-size: 12px; /* Adjust font size */
+    }
+}
+
+/* Styling for Medium Screens */
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+    .navbar-brand img {
+        height: 50px;  /* Slightly smaller logo */
+        width: 50px;
+    }
+
+    .nav-name {
+        font-size: 28px !important; /* Adjust font-size for the navbar name */
+    }
+
+    .head-image {
+        height: 60vh; /* Adjust height of the header image */
+    }
+
+    .innerpage1 {
+        padding: 30px 40px; /* Reduce padding */
+        margin: 20px 40px; /* Adjust margins */
+    }
+
+    .page1 {
+        height: auto; /* Allow content to grow with the page */
+    }
+
+    .download-container {
+        gap: 15px; /* Reduce gap between buttons */
+    }
+
+    .file-container img {
+        width: 45px;
+        height: 45px; /* Smaller icons in file containers */
+    }
+
+    .file-container p {
+        font-size: 13px; /* Adjust font-size */
+    }
+    .butin span{
+        font-size: 20px;
+    }
+}
+
+/* Keep other responsive rules for smaller and larger screens */
